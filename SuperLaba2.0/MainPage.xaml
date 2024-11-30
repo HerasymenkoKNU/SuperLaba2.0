@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SuperLaba2._0.MainPage"
+             Title="Робота з JSON">
+    <VerticalStackLayout Padding="10">
+        <!-- кнопки керування -->
+        <Button Text="Про програму" Clicked="OnLobbyClicked" Margin="0,5,0,10"/>
+        <Button Text="Відкрити JSON файл" Clicked="OnOpenFileClicked"/>
+        <Button Text="Відобразити інформацію" Clicked="OnShowDataClicked" Margin="0,5,0,0"/>
+        <Button Text="Додати запис" Clicked="OnAddDataClicked" Margin="0,5,0,0"/>
+        <Button Text="Редагувати запис" Clicked="OnEditDataClicked" Margin="0,5,0,0"/>
+        <Button Text="Видалити запис" Clicked="OnDeleteDataClicked" Margin="0,5,0,0"/>
+        <Button Text="Пошук за автором" Clicked="OnSearchByAuthorClicked" Margin="0,5,0,0" />
+        <Button Text="Пошук за типом" Clicked="OnSearchByTypeClicked" Margin="0,5,0,0" />
+        <Button Text="Пошук за датою" Clicked="OnSearchByDateClicked" Margin="0,5,0,0" />
+        <Button Text="Зберегти" Clicked="OnSaveDataClicked" Margin="0,5,0,0"/>
+        <!-- вивід інформації -->
+        <ScrollView>
+            <Grid x:Name="DataGrid" RowSpacing="10" Padding="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1.5*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </ScrollView>
+    </VerticalStackLayout>
+
+</ContentPage>
